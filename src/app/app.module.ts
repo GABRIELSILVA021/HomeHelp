@@ -13,6 +13,7 @@ import { ListarFuncionarioComponent } from './pages/listar-funcionario/listar-fu
 import { AuthService } from 'src/shared/services/auth.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,6 +21,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
   ],
   providers: [AuthService],
