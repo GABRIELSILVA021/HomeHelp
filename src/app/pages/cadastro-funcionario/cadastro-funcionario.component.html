@@ -1,12 +1,12 @@
 <main id="main" class="main">
   <div class="pagetitle d-flex">
-    <h1>Cadastro de Usuários</h1>
+    <h1>Cadastro de Funcionarios</h1>
   </div>
   <section class="section">
     <div class="col-lg-12">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Novo Usuário</h5>
+          <h5 class="card-title">Novo Funcionario</h5>
           <div class="row m-2">
             <form novalidate="novalidate" style="display: contents">
               <div class="col-12 mb-3" style="padding: 0">
@@ -48,102 +48,27 @@
                       />
                     </div>
                   </div>
+                  
                   <div class="form-group col-3">
-                    <label class="form-label">Telefone</label>
+                    <label class="form-label">Área Desejada</label>
                     <div>
-                      <input
-                        class="form-control"
-                        id="telefone"
-                        type="text"
-                        placeholder="Telefone (requerido)"
-                      />
+                      <select id="area" name="area">
+                        <option value="TI">Faxineira</option>
+                        <option value="RH">Cuidadora</option>
+                        <option value="ADM">Diarista</option>
+                        <option value="FIN">Baba</option>
+                        <option value="MK">Faz Tudo</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group col-3">
-                    <label class="form-label">Telefone</label>
+                    <label class="form-label">CPF</label>
                     <div>
                       <input
                         class="form-control"
-                        id="telefone"
+                        id="cpf"
                         type="text"
-                        placeholder="Telefone (requerido)"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group col-3">
-                    <label class="form-label">Telefone</label>
-                    <div>
-                      <input
-                        class="form-control"
-                        id="telefone"
-                        type="text"
-                        placeholder="Telefone (requerido)"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group col-3">
-                    <label class="form-label">Telefone</label>
-                    <div>
-                      <input
-                        class="form-control"
-                        id="telefone"
-                        type="text"
-                        placeholder="Telefone (requerido)"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group col-3">
-                    <label class="form-label">Telefone</label>
-                    <div>
-                      <input
-                        class="form-control"
-                        id="telefone"
-                        type="text"
-                        placeholder="Telefone (requerido)"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group col-3">
-                    <label class="form-label">Telefone</label>
-                    <div>
-                      <input
-                        class="form-control"
-                        id="telefone"
-                        type="text"
-                        placeholder="Telefone (requerido)"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group col-3">
-                    <label class="form-label">Telefone</label>
-                    <div>
-                      <input
-                        class="form-control"
-                        id="telefone"
-                        type="text"
-                        placeholder="Telefone (requerido)"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group col-3">
-                    <label class="form-label">Telefone</label>
-                    <div>
-                      <input
-                        class="form-control"
-                        id="telefone"
-                        type="text"
-                        placeholder="Telefone (requerido)"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group col-3">
-                    <label class="form-label">Telefone</label>
-                    <div>
-                      <input
-                        class="form-control"
-                        id="telefone"
-                        type="text"
-                        placeholder="Telefone (requerido)"
+                        placeholder="CPF (requerido)"
                       />
                     </div>
                   </div>
@@ -156,6 +81,23 @@
                         type="password"
                         placeholder="***"
                       />
+                    </div>
+                  </div>
+                  <div class="form-group col-3">
+                    <label class="form-label">Cidade</label>
+                    <div>
+                      <input
+                        class="form-control"
+                        id="cidade"
+                        type="text"
+                        placeholder="Cidade (requerido)"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group col-3">
+                    <label class="form-label">Descrição</label>
+                    <div>
+                      <textarea id="descricao" name="descricao"></textarea>
                     </div>
                   </div>
                 </div>
