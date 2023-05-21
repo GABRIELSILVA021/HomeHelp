@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./cadastro-usuario.component.css']
 })
 export class CadastroUsuarioComponent {
-
+  cadastro: any = {}
+  signup(){
+    console.log(this.cadastro);
+  }
 }

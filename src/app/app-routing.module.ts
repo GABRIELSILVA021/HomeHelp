@@ -7,11 +7,13 @@ import { ContratarFuncionarioComponent } from './pages/contratar-funcionario/con
 import { HomeComponent } from './pages/home/home.component';
 import { ListarFuncionarioComponent } from './pages/listar-funcionario/listar-funcionario.component';
 import { LoginComponent } from './pages/login/login.component';
+import { NoLoginAuthGuard } from 'src/shared/guard/noLogin.auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard], },
-  { path: 'login', component: LoginComponent },
-  { path: 'cadastro-usuario', component: CadastroUsuarioComponent, canActivate: [AuthGuard], },
+  { path: 'login', component: LoginComponent,  canActivate: [NoLoginAuthGuard] },
+  
+  { path: 'cadastro-usuario', component: CadastroUsuarioComponent,  canActivate: [NoLoginAuthGuard] },
   { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent, canActivate: [AuthGuard], },
   { path: 'listar-funcionario', component: ListarFuncionarioComponent, canActivate: [AuthGuard], },
   { path: 'contratar-funcionario', component: ContratarFuncionarioComponent, canActivate: [AuthGuard], },
