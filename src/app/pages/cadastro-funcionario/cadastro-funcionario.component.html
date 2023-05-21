@@ -8,7 +8,7 @@
         <div class="card-body">
           <h5 class="card-title">Novo Funcionario</h5>
           <div class="row m-2">
-            <form novalidate="novalidate" style="display: contents">
+            <form novalidate #formResilicao="ngForm" style="display: contents" (ngSubmit)="cadastrar()">
               <div class="col-12 mb-3" style="padding: 0">
                 <div class="text-left mb-1">
                   <h5>Dados do Usuário</h5>
@@ -17,42 +17,30 @@
                   <div class="col-3">
                     <label class="form-label">Nome</label>
                     <div>
-                      <input
-                        class="form-control"
-                        id="nome"
-                        type="text"
-                        placeholder="Nome (requerido)"
-                      />
+                      <input [(ngModel)]="funcionario.nome" #nome="ngModel" id="nome" type="text" name="nome"
+                        placeholder="Nome (requerido)" />
                     </div>
                   </div>
 
                   <div class="form-group col-3">
                     <label class="form-label">E-mail</label>
                     <div>
-                      <input
-                        class="form-control"
-                        id="email"
-                        type="email"
-                        placeholder="e-mail (requerido)"
-                      />
+                      <input [(ngModel)]="funcionario.email" #email="ngModel" id="email" name="email" type="email"
+                        placeholder="e-mail (requerido)" />
                     </div>
                   </div>
                   <div class="form-group col-3">
                     <label class="form-label">Telefone</label>
                     <div>
-                      <input
-                        class="form-control"
-                        id="telefone"
-                        type="text"
-                        placeholder="Telefone (requerido)"
-                      />
+                      <input [(ngModel)]="funcionario.telefone" #telefone="ngModel" id="telefone" type="text"
+                        placeholder="Telefone (requerido)" name="telefone" />
                     </div>
                   </div>
-                  
+
                   <div class="form-group col-3">
                     <label class="form-label">Área Desejada</label>
                     <div>
-                      <select id="area" name="area">
+                      <select [(ngModel)]="funcionario.areaDesejada" #areaDesejada="ngModel" id="area" name="area">
                         <option value="TI">Faxineira</option>
                         <option value="RH">Cuidadora</option>
                         <option value="ADM">Diarista</option>
@@ -64,60 +52,42 @@
                   <div class="form-group col-3">
                     <label class="form-label">CPF</label>
                     <div>
-                      <input
-                        class="form-control"
-                        id="cpf"
-                        type="text"
-                        placeholder="CPF (requerido)"
-                      />
+                      <input [(ngModel)]="funcionario.cpf" #cpf="ngModel" id="cpf" type="text" name="cpf"
+                        placeholder="CPF (requerido)" />
                     </div>
                   </div>
                   <div class="form-group col-3">
                     <label class="form-label">Senha</label>
                     <div>
-                      <input
-                        class="form-control"
-                        id="senha"
-                        type="password"
-                        placeholder="***"
-                      />
+                      <input [(ngModel)]="funcionario.senha" #senha="ngModel" name="senha" id="senha" type="password"
+                        placeholder="***" />
                     </div>
                   </div>
                   <div class="form-group col-3">
-                    <label class="form-label">Cidade</label>
+                    <label class="form-label">Endereço</label>
                     <div>
-                      <input
-                        class="form-control"
-                        id="cidade"
-                        type="text"
-                        placeholder="Cidade (requerido)"
-                      />
+                      <input [(ngModel)]="funcionario.endereco" #endereco="ngModel" name="endereco" id="cidade"
+                        type="text" placeholder="Cidade (requerido)" />
                     </div>
                   </div>
                   <div class="form-group col-3">
                     <label class="form-label">Descrição</label>
                     <div>
-                      <textarea id="descricao" name="descricao"></textarea>
+                      <textarea id="descricao" [(ngModel)]="funcionario.descricao" #descricao="ngModel"
+                        name="descricao"></textarea>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="col-12"
-                style="
+              <div class="col-12" style="
                   display: flex;
                   gap: 1rem;
                   align-items: baseline;
                   justify-content: end;
-                "
-              >
+                ">
                 <a class="btn btn-info" style="color: #fff" [routerLink]="['/']">Voltar</a>
-                <input
-                  style="max-width: 10rem"
-                  type="submit"
-                  value="Cadastrar"
-                  class="btn btn-primary"
-                />
+                <button style="max-width: 10rem" class="btn btn-primary" [disabled]="formResilicao.form.invalid"
+                  type="submit" value="Cadastrar" class="btn btn-primary">Cadastrar</button>
               </div>
             </form>
           </div>
@@ -155,3 +125,9 @@
 
 	<input type="submit" value="Cadastrar">
 </form> -->
+<footer>
+  <div class="contact-info">
+    <p><i class="fa fa-envelope"></i> homehelpservices@gmail.com</p>
+    <p><i class="fa fa-phone"></i> +55 16897-9866</p>
+  </div>
+</footer>

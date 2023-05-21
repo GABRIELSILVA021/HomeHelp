@@ -16,9 +16,9 @@
     <label for="name">Nome:</label>
     <input
       type="text"
-      [(ngModel)]="cadastro.nameUser"
+      [(ngModel)]="cadastro.nome"
+      #nome="ngModel"
       required
-      #nameUser="ngModel"
       id="name"
       name="name"
       required
@@ -36,9 +36,9 @@
     <label for="phone">Telefone:</label>
     <input
       type="text"
-      [(ngModel)]="cadastro.phone"
+      [(ngModel)]="cadastro.telefone"
       required
-      #phone="ngModel"
+      #telefone="ngModel"
       id="phone"
       name="phone"
       required
@@ -46,9 +46,9 @@
     <label for="address">Endereço:</label>
     <input
       type="email"
-      [(ngModel)]="cadastro.address"
+      [(ngModel)]="cadastro.endereco"
       required
-      #address="ngModel"
+      #endereco="ngModel"
       id="address"
       name="address"
       required
@@ -56,9 +56,9 @@
     <label for="password">Senha:</label>
     <input
       type="password"
-      [(ngModel)]="cadastro.password"
+      [(ngModel)]="cadastro.senha"
       required
-      #password="ngModel"
+      #senha="ngModel"
       id="password"
       name="password"
       required

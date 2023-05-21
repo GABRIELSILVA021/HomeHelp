@@ -1,10 +1,24 @@
-<div class="card">
-    <img src="" alt="">
-    <div class="card-body">
-      <h2>Nome: Maria de Lurdes</h2>
-      <p>Telefone: (55)169934-5678 </p>
-      <p>Idade: 45</p>
-      <p>Cidade: Matão-Sp</p>
-      <p>Avaliação: 4.7</p>
-    </div>
+<main id="main" class="main">
+  <div class="pagetitle d-flex">
+    <h1>Listagem de Funcionarios</h1>
   </div>
+  <section class="col-12 d-flex">
+    <div class="col-lg-4" *ngFor="let func of funcionarios">
+      <div class="card" style="height: 250px;">
+        <img src="" alt="">
+        <div class="card-body">
+          <h2>Nome: {{func.nome}}</h2>
+          <p>Telefone: {{func.telefone}} </p>
+          <p>Área Desejada: {{func.areaDesejada}}</p>
+          <p>Descrição: {{func.descricao}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="contact-info">
+    <p><i class="fa fa-envelope"></i> homehelpservices@gmail.com</p>
+    <p><i class="fa fa-phone"></i> +55 16897-9866</p>
+  </div>
+</footer>

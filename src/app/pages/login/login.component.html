@@ -1,20 +1,15 @@
-<div
-  style="
+<div style="
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-  "
->
-  <form
-    (ngSubmit)="login()"
-    style="width: 30%; display: flex; flex-direction: column"
-  >
+  ">
+  <form (ngSubmit)="login()" #formLogin="ngForm" novalidate style="width: 30%; display: flex; flex-direction: column">
     <h2>Login</h2>
     <label for="username">Usuário:</label>
-    <input type="text" id="username" name="username" required />
+    <input type="text" [(ngModel)]="loginForm.email" #email='ngModel' id="username" name="username" required />
     <label for="password">Senha:</label>
-    <input type="password" id="password" name="password" required />
+    <input type="password" [(ngModel)]="loginForm.senha" #senha="ngModel" id="password" name="password" required />
     <input type="submit" value="Entrar" />
     <p class="small mb-0">
       Não possui uma conta?

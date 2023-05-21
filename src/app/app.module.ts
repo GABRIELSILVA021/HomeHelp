@@ -14,6 +14,8 @@ import { AuthService } from 'src/shared/services/auth.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,9 +23,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
