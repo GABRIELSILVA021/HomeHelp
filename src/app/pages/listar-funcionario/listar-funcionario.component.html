@@ -2,20 +2,74 @@
   <div class="pagetitle d-flex">
     <h1>Listagem de Funcionarios</h1>
   </div>
-  <section class="col-12 d-flex">
+
+
+
+
+  <div *ngIf="showEmptyMessage" class="card row" style="width: 100%;" >
+
+    <div class="p-3">
+
+      <div class="align-items-middle justify-content-center flex-column no-result-text">
+
+        <p class="d-flex justify-content-center">NENHUM RESULTADO ENCONTRADO</p>
+
+        <small class="d-flex justify-content-center">
+
+          Não localizamos informações de Funcionários.
+
+        </small>
+
+      </div>
+
+    </div>
+
+    <div class="col-12 mt-3">
+
+      <div class="d-flex justify-content-end">
+
+        <button type="button" class="btn btn-sm btn-primary mr-2 pl-3 pr-3" (click)="voltarButton()">
+
+          Voltar
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <section class="col-12 d-flex" *ngIf="!showEmptyMessage">
     <div class="col-lg-4" *ngFor="let func of funcionarios">
-      <div class="card" style="height: 250px;">
+      <div class="card" style="max-height: 340px;">
         <img src="" alt="">
-        <div class="card-body">
-          <h2>Nome: {{func.nome}}</h2>
-          <p>Telefone: {{func.telefone}} </p>
+        <div class="card-body" style="max-height: 320px; overflow: auto;">
+          <h5>
+            <strong>
+
+              {{func.nome}}
+            </strong>
+          </h5>
+          <p>Telefone: {{func.telefone | mask:'(00) 00000-0000'}} </p>
           <p>Área Desejada: {{func.areaDesejada}}</p>
           <p>Descrição: {{func.descricao}}</p>
+          <p>Cidade: {{func.cidade }}</p>
+          <p>Valor: {{func.valor | currency}}</p>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-sm btn-info" style="color:#fff" (click)="contratar()">Contratar</button>
+
         </div>
       </div>
     </div>
   </section>
 </main>
+
 <footer>
   <div class="contact-info">
     <p><i class="fa fa-envelope"></i> homehelpservices@gmail.com</p>

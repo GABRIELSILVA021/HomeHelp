@@ -1,7 +1,14 @@
+:root{
+    --color1: #7b87a4 ;
+    --color2: #94a0bb ;
+    --color3: #acb8d2 ;
+    --color4: #c5d1e8;
+    --color5:  #dde9ff ;
+}
 form {
 	max-width: 400px;
 	margin: 0 auto;
-	background-color: #fff;
+	background-color: #dde9ff;
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -30,7 +37,7 @@ form {
   }
   
   input[type="submit"] {
-	background-color: #4CAF50;
+	background-color: #94a0bb;
 	color: #fff;
 	border: none;
 	border-radius: 5px;
@@ -40,6 +47,6 @@ form {
   }
   
   input[type="submit"]:hover {
-	background-color: #3e8e41;
+	background-color: #7b87a4;
   }
   

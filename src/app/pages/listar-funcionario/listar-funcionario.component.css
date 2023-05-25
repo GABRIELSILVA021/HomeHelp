@@ -1,3 +1,10 @@
+:root{
+  --color1: #7b87a4 ;
+  --color2: #94a0bb ;
+  --color3: #acb8d2 ;
+  --color4: #c5d1e8;
+  --color5:  #dde9ff ;
+}
 .card {
   width: 300px;
   border: 1px solid #ccc;
@@ -24,4 +31,14 @@
 .card-content p {
   font-size: 14px;
   margin-bottom: 5px;
+}
+.button {
+  display: inline-block;
+  background-color: #94a0bb;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

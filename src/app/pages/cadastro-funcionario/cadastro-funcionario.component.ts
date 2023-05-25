@@ -13,7 +13,8 @@ export class CadastroFuncionarioComponent {
   constructor(private http: HttpClient, private tostr: ToastrService) { }
 
   cadastrar() {
-
+    this.funcionario.cpf = +this.funcionario.cpf;
+    this.funcionario.valor = parseFloat(this.funcionario.valor);
     this.http.post('http://localhost:8080/funcionarios', this.funcionario).subscribe({
       next: (data: any) => {
         this.tostr.success('Funcionário cadastrado com sucesso!');
