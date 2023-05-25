@@ -17,7 +17,7 @@ export class ListarFuncionarioComponent implements OnInit {
   }
 
   contratar() {
-    this.tostr.success('Contratado com Sucesso!', 'Contratação de Funcionário');
+    this.tostr.success('Contratado com Sucesso! Aguarde, o prestador de serviço ira entrar em contato!',  'Contratação de Funcionário');
   }
 
 
